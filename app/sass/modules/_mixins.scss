@@ -1,0 +1,26 @@
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  } 
+}
+
+
+
+
+
+// .gradient {
+//   $experimental-support-for-svg: true;
+//   @include background(linear-gradient(top, yellow, blue));
+
+//   // for older IEs
+//   .oldie & {
+//     background-color: yellow;
+//     @include filter-gradient(yellow, blue, vertical);
+//   }
+// }
+

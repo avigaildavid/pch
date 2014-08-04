@@ -1,0 +1,31 @@
+// ------------------------------------------------------------------------------------------------------------
+// Fonts and Icons --------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------
+
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+// @import url('http://fonts.googleapis.com/css?family=PT+Sans');
+@import url('http://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+// common font stacks -----------------------------------------------------------------------
+
+$times-new-roman : "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times  : Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia    : Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana    : Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma     : Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica  : Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial  : Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+$courier    : "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+$myriadAlt: 'Noto Sans',  Helvetica,  Arial, sans-serif;
+
+// Fonts etc. --------------------------------------------------------------------------------
+
+$font-body  : $helvetica ;
+$font-headline  : $myriadAlt;
+
+
+
+// -------------------------------------------------------------------------------------------

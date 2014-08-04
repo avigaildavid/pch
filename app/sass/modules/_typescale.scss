@@ -1,0 +1,191 @@
+
+//Creating the type scale w/ Modular Scale ---------------------------------------------------------------------
+
+// Use places holders below to get all the mixin goodness :)
+// also see dev notes at the bottom of the page
+//-------------------------------------------------------------------------------------
+// set up for fonts use placeholder not vars
+
+$tiny-font-size      : 10px;
+$tiny-font-leading   : 0.75;
+
+$small-font-size     : 14px;
+$small-font-leading  : 0.75;
+
+$base-font-size      : 18px;
+$base-font-leading   : 1;
+
+$medium-font-size    : 24px;
+$medium-font-leading : 1.25;
+
+$large-font-size     : 32px;
+$large-font-leading  : 1.25;
+
+$xlarge-font-size    : 43px;
+$xlarge-font-leading : 1.5;
+
+
+@mixin typeSize($size) {
+  @if $size == "tiny" {
+    @include adjust-font-size-to($tiny-font-size);
+    @include adjust-leading-to($tiny-font-leading);
+  }
+
+  @if $size == "small" {
+    @include adjust-font-size-to($small-font-size);
+    @include adjust-leading-to($small-font-leading);
+  }
+
+  @if $size == "base" {
+    @include adjust-font-size-to($base-font-size);
+    @include adjust-leading-to($base-font-leading);
+  }
+
+  @if $size == "medium" {
+    @include adjust-font-size-to($medium-font-size);
+    @include adjust-leading-to($medium-font-leading);
+  }
+
+  @if $size == "large" {
+    @include adjust-font-size-to($large-font-size);
+    @include adjust-leading-to($large-font-leading);
+  }
+
+  @if $size == "xlarge" {
+    @include adjust-font-size-to($xlarge-font-size);
+    @include adjust-leading-to($xlarge-font-leading);
+  }
+}
+
+
+// Responsive version ---------------------------------------------------------------
+
+@mixin responsiveTypeSize($size) {
+
+  @if $size == "tiny" {
+    @include adjust-font-size-to($tiny-font-size, $tiny-font-leading);
+  }
+
+  @if $size == "small" {
+    @include adjust-font-size-to($tiny-font-size, $tiny-font-leading);
+
+    @include breakpoint($small-screen-width) {
+      @include adjust-font-size-to($tiny-font-size, $tiny-font-leading);
+    }
+  }
+
+  @if $size == "base" {
+    @include adjust-font-size-to($small-font-size, $small-font-leading);
+
+    @include breakpoint($small-screen-width) {
+      @include adjust-font-size-to($base-font-size, $base-font-leading);
+    }
+  }
+
+  @if $size == "medium" {
+    @include adjust-font-size-to($base-font-size, $base-font-leading);
+
+    @include breakpoint($small-screen-width) {
+      @include adjust-font-size-to($medium-font-size, $medium-font-leading);
+    } 
+  }
+
+  @if $size == "large" {
+    @include adjust-font-size-to($medium-font-size, $medium-font-leading);
+
+    @include breakpoint($small-screen-width) {
+      @include adjust-font-size-to($large-font-size, $large-font-leading);
+    }
+  }
+
+  @if $size == "xlarge" {
+    @include adjust-font-size-to($large-font-size, $large-font-leading);
+    
+    @include breakpoint($small-screen-width) {
+      @include adjust-font-size-to($xlarge-font-size, $xlarge-font-leading);
+    }
+  }
+
+}
+
+
+// ------------------------------------------------------------------------------------------
+//  USE THESE 
+//  PLEASE :) Placeholder are created using defaults + mixins
+// ------------------------------------------------------------------------------------------
+
+
+// % = placeholders for Type size variants no breakpoints
+
+%t-tiny         { @include typeSize(tiny);   }
+%t-small        { @include typeSize(small);  }
+%t-base         { @include typeSize(base);   }
+%t-medium    { @include typeSize(medium); }
+%t-large        { @include typeSize(large);  }
+%t-xlarge       { @include typeSize(xlarge); }
+
+
+// % = placeholders for Type size variants with breakpoints
+
+%t-rs-tiny      { @include responsiveTypeSize(tiny);   }
+%t-rs-small     { @include responsiveTypeSize(small);  }
+%t-rs-base      { @include responsiveTypeSize(base);   }
+%t-rs-medium    { @include responsiveTypeSize(medium); }
+%t-rs-large     { @include responsiveTypeSize(large);  }
+%t-rs-xlarge    { @include responsiveTypeSize(xlarge); }
+
+// % = placeholders for Type weights
+
+%t-ultrastrong  { font-weight: 900; }
+%t-strong       { font-weight: 700; }
+%t-regular      { font-weight: 400; }
+%t-light        { font-weight: 300; }
+%t-ultralight   { font-weight: 200; }
+
+
+// ------------------------------------------------------------------------------------------
+
+
+// Dev Notes ----------------------------------------------------------------------------
+
+//mixin  with breakpoints we drop the font size  to prev var as the default in the typeSize mixin 
+// but if it is a small screen up the font. Below it is explained :
+
+// size tiny   uses tiny   font as default no breakpoint
+// size small  uses tiny   font as default for small screens
+// size base   uses small  font as default for small screens up font to base
+// size medium uses base   font as default for small screens up font to medium
+// size large  uses medium font as default for small screens up font to large
+// size xlarge uses large  font as default for small screens up font to xlarge
+
+//---------------------
+
+// Place holder Notes
+
+// if you want @extend using a class as a hook not ideal but its an option. 
+// element { @extend .t-size; }
+// will output .t-size , element { size values }
+
+// Type — example use case
+// #{headings(4)} {  margin: 0; }
+
+// h1 { @extend %t-xlarge; }
+// h2 { @extend %t-large;  }
+// h3 { @extend %t-medium; }
+// h4 { @extend %t-base;   }
+
+// p         {  @extend %t-base; @extend %t-light; }
+// small     { @extend %t-small; }
+// strong, b { @extend %t-strong; }
+
+//class version
+// and additionally the classes for every size.
+
+// .t-tiny         { @include typeSize(tiny);   }
+// .t-small        { @include typeSize(small);  }
+// .t-base         { @include typeSize(base);   }
+// .t-medium       { @include typeSize(medium); }
+// .t-large        { @include typeSize(large);  }
+// .t-xlarge       { @include typeSize(xlarge); }
+
+// all this is from https://medium.com/typography/34fe2f1d2c02 

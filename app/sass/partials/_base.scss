@@ -1,0 +1,31 @@
+
+// "base" partial
+// setting global styles for text
+html{ font-size: 62.5%; }
+
+body {
+    font-size: 14px; font-size: 1.4rem;
+    line-height :1.4;
+    font-family: $font-body; 
+    color: $lightgray;
+
+}
+
+#{ headings() }{
+    font-family:$font-headline;
+    font-weight: normal;
+}
+
+
+a {
+    display: block;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    color: $lightgray;
+    &:hover{ 
+        color: $lightgray;
+        text-decoration: none;
+    }
+}
+

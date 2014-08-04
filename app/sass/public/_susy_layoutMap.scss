@@ -1,0 +1,86 @@
+// Susy Layout Map
+ 
+$layouts: (
+  
+  default: (
+    small: (
+      math: fluid,
+      columns: 4,
+      column-width: 3.5em,
+      gutters: 1/3
+    ),
+    med: (
+      math: fluid,
+      columns: 8,
+      column-width: 3.5em,
+      gutters: 1/3
+    ),
+    large: (
+      math: static,
+      columns: 12,
+      column-width: 3.5em,
+      gutters: 1/3
+    )
+  ),
+  
+  main: (
+    small: (
+      math: fluid,
+      columns: 4,
+      column-width: 3.5em,
+      gutters: 1/3
+    ),
+    med: (
+      math: fluid,
+      columns: 6,
+      column-width: 3.5em,
+      gutters: 1/3
+    ),
+    large: (
+      math: fluid,
+      columns: 8,
+      column-width: 3.5em,
+      gutters: 1/3
+    )
+  ),
+  
+  sidebar: (
+    small: (
+      math: fluid,
+      columns: 4,
+      column-width: 3.5em,
+      gutters: 1/3
+    ),
+    med: (
+      math: fluid,
+      columns: 2,
+      column-width: 3.5em,
+      gutters: 1/3
+    ),
+    large: (
+      math: fluid,
+      columns: 4,
+      column-width: 3.5em,
+      gutters: 1/3
+    )
+  )
+);
+ 
+// Mixin + Function
+ 
+@mixin get-layout($args, $map: $layouts) {
+  @include container(map-fetch($map, $args));
+};
+ 
+@function get-layout($args, $map: $layouts) {
+  @return container(map-fetch($map, $args));
+};
+ 
+//Usage
+aside {
+  @include get-layout(sidebar large);
+}
+ 
+article {
+  @include get-layout(main large)
+}

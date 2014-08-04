@@ -1,0 +1,40 @@
+@mixin pull-quote($direction) {
+    $opposite: opposite-position($direction);
+    text-align: $opposite;
+    float: $direction;  
+    margin: 0 0 .5em 0;
+    margin-#{$opposite}: 1em;
+    border-#{$opposite}: 6px solid $pink;
+    padding-#{$opposite}: 1em;
+}
+
+@mixin background-img-width-height($image){
+    background: url($image);
+    width:  image-width($image);
+    height: image-height($image);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------
+//http://hugogiraudel.com/2013/03/25/compass-extensions/
+//

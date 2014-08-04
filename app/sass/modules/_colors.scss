@@ -1,0 +1,38 @@
+// Colors, etc. ------------------------------------------------------------------------------
+
+$white  : #ffffff;
+$offblack   : #333333;
+$black : #000000;
+$lightgray      : #dcdcdc;
+$mediumgray     : #3b3b3b;
+$darkgray       : #272727;
+$lightslate: #474747;
+$darkslate: #909090;
+
+
+
+// $gray           : #708284;
+
+
+// $darkblue       : #0A2933;
+// $darkerblue     : #042029;
+// $paleryellow    : #FCF4DC;
+// $paleyellow     : #EAE3CB;
+// $yellow         : #A57706;
+// $orange         : #BD3613;
+// $red            : #D11C24;
+// $pink           : #C61C6F;
+// $purple         : #595AB7;
+// $blue           : #2176C7;
+// $cyan           : #259286;
+// $green          : #738A05;
+
+// Color Place holders
+
+
+%whiteDarkBlueLinks {
+    color: $lightgray ;
+    &:hover{
+        color:$darkgray;
+    } 
+}

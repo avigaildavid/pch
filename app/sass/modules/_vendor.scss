@@ -1,0 +1,28 @@
+
+
+
+// Breakpoint--------------------------
+
+$breakpoint-to-ems: true;
+
+$small-screen-width                          : 30em; 
+
+$small-to-medium-screen-width        : screen max-width 768px;
+$medium-screen-width-landscape      : ( min-width 768px) (max-width 1024px) (orientation landscape) ;
+
+$large-screen-width                           : 75em;
+
+// Compass ----------------------------
+
+$rhythm-unit                  : "rem"; // Compass Sets rhythm unit to rem. Remove to use default em unit. 
+$default-border-radius    : 5px;
+
+
+// Legacy IE support ------------------
+$experimental-support-for-microsoft: true;
+$legacy-support-for-ie6   : false;
+$legacy-support-for-ie7   : false;
+$legacy-support-for-ie8   : true;
+
+// To turn on support for IE6 or IE7, set those variables to true.
+// the documentation at http://compass-style.org/reference/compass/support/

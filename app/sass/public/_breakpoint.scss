@@ -1,0 +1,154 @@
+
+// $breakpoint-to-ems: true;
+
+// // create $breakpoint variables like so
+// // assume min-width (by default) if only a number
+// $breakpoint-medium-width: 500px;
+// $breakpoint-medium-width-em: 30em;
+
+// // set min-width/max-width if both values are numbers
+// $breakpoint-medium-not-wide: 500px 700px;
+
+// // set min/max of feature if there are two numbers
+// $breakpoint-medium-height: height 300px 700px;
+
+// // if one value is a string, assume a feature/value pair
+// $breakpoint-kind-of-wide: min-width 700px;
+// $breakpoint-not-too-wide: max-width 700px;
+
+// // for multidimensional lists, assume each item is a feature value pair
+// $breakpoint-wide-portrait: (max-width 700px) (orientation portrait);
+
+// // handle one-sided features (ie. monochrome)
+// $breakpoint-wide-portrait-mono: (max-width 700px) (orientation portrait) (monochrome);
+// $breakpoint-mono: monochrome;
+// $breakpoint-hi-rez: min-resolution 1.5dppx;
+
+/*  20em (320px)  */
+/*  30em (480px)  */
+/*  37.5em (600px)  */
+/*  48em (768px)  */
+/*  56.25em (900px)  */
+/*  68.75em (1100px)  */
+/*  81.25em (1300px)  */
+
+
+/***************************************************************************************************************************/
+/********** 300px breakpoint ***************************/
+@media all and (min-width: 18.75em) {}
+
+/********** 400px breakpoint ***************************/
+@media all and (min-width: 25em) {}
+
+/********** 600px breakpoint ***************************/
+@media all and (min-width: 37.5em) {}
+
+/********** 800px breakpoint ***************************/
+@media all and (min-width: 50em) {}
+
+/********** 920px breakpoint ***************************/
+@media all and (min-width: 57.5em) {}
+
+/********** 1044px breakpoint **************************/
+@media all and (min-width: 65.25em) {}
+
+
+/********** tried***************************/
+
+// $small-screen-width : screen max-width 48em, (orientation : portrait);
+
+//$medium-screen-width: screen max-width 768px;
+
+//$medium-screen-width: max-width 1024px;  
+// $small-screen-width : screen max-width 48em, (orientation : portrait);
+// $medium-screen-width: screen 768px 1024px, (orientation : landscape) ;
+
+
+
+/********************************************
+/*****  http://cloudfour.com/css/styles.css  */
+
+/***************************************************************************************************************************/
+
+
+/***************************************************************************************************************************
+@media only screen and (min-width: 400px) {}
+@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 720px) {}
+@media only screen and (min-width: 800px) {}
+@media only screen and (min-width: 980px) {}
+@media only screen and (min-width: 1188px) {}
+@media only screen and (min-width: 1440px) {}
+
+
+
+http://aneventapart.com/assets/_/css/style-refactored.css
+
+***************************************************************************************************************************/
+
+
+/* Smartphones (portrait and landscape) 
+(min-device-width : 320px) and (max-device-width : 480px) ----------- */
+
+/* Smartphones (landscape)  
+(min-width : 321px) ----------- */
+
+/* Smartphones (portrait) 
+(max-width : 320px) ----------- */
+
+/* iPads (portrait and landscape) 
+ (min-device-width : 768px) and (max-device-width : 1024px) ----------- */
+
+/* iPads (landscape) 
+(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) ----------- */ 
+
+/* iPads (portrait)
+(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)  ----------- */
+
+/**********
+iPad 3
+
+(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) 
+
+(min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)  ----------- */
+
+
+/* Desktops and laptops ----------- */
+/*(min-width : 1224px)  ----------- */
+
+/* Large screens ----------- */
+/* (min-width : 1824px) ----------- */
+
+/* iPhone 4 ----------- */
+/*(min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)  ----------- */
+
+
+/* (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)  ----------- */
+
+
+
+
+//------------------------------------------------------------------
+
+/*
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+
+http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+*/

@@ -1,0 +1,189 @@
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../../app/sass/modules/_mixins.scss */
+#twitterWidget, #twitterWidget .userTweets li {
+  *zoom: 1;
+}
+/* line 3, ../../app/sass/modules/_mixins.scss */
+#twitterWidget:before, #twitterWidget .userTweets li:before, #twitterWidget:after, #twitterWidget .userTweets li:after {
+  content: " ";
+  display: table;
+}
+/* line 7, ../../app/sass/modules/_mixins.scss */
+#twitterWidget:after, #twitterWidget .userTweets li:after {
+  clear: both;
+}
+
+/* line 4, ../../app/sass/partials/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 6, ../../app/sass/partials/_base.scss */
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  color: gainsboro;
+}
+
+/* line 14, ../../app/sass/partials/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+/* line 20, ../../app/sass/partials/_base.scss */
+a {
+  display: block;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  color: gainsboro;
+}
+/* line 26, ../../app/sass/partials/_base.scss */
+a:hover {
+  color: gainsboro;
+  text-decoration: none;
+}
+
+/* line 1, ../../app/sass/partials/_widgets.scss */
+#twitterWidget {
+  margin: 5px 10px;
+  margin: 0.3125rem 0.625rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #909090;
+  background-color: #272727;
+}
+/* line 8, ../../app/sass/partials/_widgets.scss */
+#twitterWidget h3 {
+  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
+  text-shadow: #333333 1px 2px;
+  background-image: -moz-linear-gradient(#909090 20%, #474747 80%);
+  background-image: -webkit-linear-gradient(#909090 20%, #474747 80%);
+  background-image: linear-gradient(#909090 20%, #474747 80%);
+  color: white;
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+/* line 15, ../../app/sass/partials/_widgets.scss */
+#twitterWidget h4 {
+  position: relative;
+  font-size: 17px;
+  font-size: 1.7rem;
+  padding-left: 15px;
+}
+/* line 19, ../../app/sass/partials/_widgets.scss */
+#twitterWidget h4:before {
+  content: "@";
+  font-size: 90%;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+}
+/* line 30, ../../app/sass/partials/_widgets.scss */
+#twitterWidget .userTweets ul {
+  background: url('../img/pch-logo.png?1406732772');
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+}
+/* line 35, ../../app/sass/partials/_widgets.scss */
+#twitterWidget .userTweets li {
+  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid #3b3b3b;
+}
+/* line 40, ../../app/sass/partials/_widgets.scss */
+#twitterWidget .userTweets li .userImg {
+  float: left;
+  width: 60px;
+}
+/* line 44, ../../app/sass/partials/_widgets.scss */
+#twitterWidget .userTweets li .userTxt {
+  padding-left: 60px;
+}
+/* line 49, ../../app/sass/partials/_widgets.scss */
+#twitterWidget a.refreshIcon {
+  float: right;
+  text-align: center;
+  padding-top: 7px;
+}
+/* line 53, ../../app/sass/partials/_widgets.scss */
+#twitterWidget a.refreshIcon i {
+  width: 24px;
+  height: 24px;
+  font-size: 110%;
+}
